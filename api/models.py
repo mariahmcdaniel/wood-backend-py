@@ -1,11 +1,11 @@
-from database import db
-from app import db
+from main import db
 
 class Project(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
     description = db.Column(db.String)
     created_at = db.Column(db.Date)
+    
     def to_dict(self):
         return {
             "id": self.id,
