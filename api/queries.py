@@ -16,3 +16,11 @@ def listProjects_resolver(obj, info):
         }    
     return payload    
 
+@convert_kwargs_to_snake_case
+def getProject_resolver(obj, info, id):
+    try:
+        project = Project.query.get(id)
+        payload = {
+            "success": True,
+            "project": project.to_dict()
+        }
