@@ -1,5 +1,4 @@
 from .models import Project
-from ariadne import convert_kwargs_to_snake_case
 
 def listProjects_resolver(obj, info):
     try:
@@ -15,6 +14,8 @@ def listProjects_resolver(obj, info):
             "errors": [str(error)]
         }    
     return payload    
+
+from ariadne import convert_kwargs_to_snake_case
 
 @convert_kwargs_to_snake_case
 def getProject_resolver(obj, info, id):
