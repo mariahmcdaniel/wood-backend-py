@@ -15,4 +15,4 @@ db = SQLAlchemy(app)
 
 @app.route('/')
 def hello():
-    return 'My First API !!'
+    return 'Wood Guitars Backend'
