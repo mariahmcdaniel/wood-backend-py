@@ -1,5 +1,5 @@
-from ariadne import convert_kwargs_to_snake_case
 from .models import Project
+from ariadne import convert_kwargs_to_snake_case
 
 def listProjects_resolver(obj, info):
     try:
