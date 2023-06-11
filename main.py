@@ -5,6 +5,9 @@ from ariadne.explorer import ExplorerGraphiQL
 from flask import request, jsonify
 from api.queries import listProjects_resolver
 
+query = ObjectType("Query")
+query.set_field("listProjects", listProjects_resolver)
+
 type_defs = load_schema_from_path("./schema.graphql")
 schema = make_executable_schema(
     type_defs, snake_case_fallback_resolvers
