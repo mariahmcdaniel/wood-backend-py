@@ -10,7 +10,7 @@ query.set_field("listProjects", listProjects_resolver)
 
 type_defs = load_schema_from_path("./schema.graphql")
 schema = make_executable_schema(
-    type_defs, snake_case_fallback_resolvers
+    type_defs, query, snake_case_fallback_resolvers
 )
 
 explorer_html = ExplorerGraphiQL().html(None)
