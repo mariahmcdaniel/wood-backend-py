@@ -7,6 +7,7 @@ from api.queries import listProjects_resolver, getProject_resolver
 
 query = ObjectType("Query")
 query.set_field("listProjects", listProjects_resolver)
+query.set_field("getProject", getProject_resolver)
 
 type_defs = load_schema_from_path("./schema.graphql")
 schema = make_executable_schema(
