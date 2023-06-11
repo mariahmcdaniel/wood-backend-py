@@ -3,6 +3,7 @@ from ariadne import load_schema_from_path, make_executable_schema, \
     graphql_sync, snake_case_fallback_resolvers, ObjectType
 from ariadne.explorer import ExplorerGraphiQL
 from flask import request, jsonify
+from api.queries import listProjects_resolver
 
 type_defs = load_schema_from_path("./schema.graphql")
 schema = make_executable_schema(
