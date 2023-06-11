@@ -7,3 +7,8 @@ def listProjects_resolver(obj, info):
             "success": True,
             "projects" : projects
         }
+    except Exception as error:
+        payload = {
+            "success": False,
+            "errors": [str(error)]
+        }    
