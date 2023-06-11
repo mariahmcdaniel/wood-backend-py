@@ -24,3 +24,8 @@ def getProject_resolver(obj, info, id):
             "success": True,
             "project": project.to_dict()
         }
+    except AttributeError:
+        payload = {
+            "success": False,
+            "errors": ["Project item matching {id} not found"]
+        }    
