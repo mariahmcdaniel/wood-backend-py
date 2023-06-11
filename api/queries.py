@@ -12,3 +12,4 @@ def listProjects_resolver(obj, info):
             "success": False,
             "errors": [str(error)]
         }    
+    return payload    
