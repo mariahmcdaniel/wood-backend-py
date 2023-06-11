@@ -28,4 +28,5 @@ def getProject_resolver(obj, info, id):
         payload = {
             "success": False,
             "errors": ["Project item matching {id} not found"]
-        }    
+        }
+    return payload        
